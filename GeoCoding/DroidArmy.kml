@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Style id="doNoContact">
+      <IconStyle>
+        <color>ff00ff00</color>
+        <colorMode>normal</colorMode>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/pal3/icon47.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="currentCustomer">
+      <IconStyle>
+        <color>ff00ff00</color>
+        <colorMode>normal</colorMode>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/pal3/icon23.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="cancelledCustomer">
+      <IconStyle>
+        <color>ff00ff00</color>
+        <colorMode>normal</colorMode>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/pal3/icon51.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name> ABUASSAF</name>
+      <address>538 CLARENDON AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 538 CLARENDON AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.403146,40.804377
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ADAM CLARCK</name>
+      <address>224 CLARENDON AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 224 CLARENDON AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.403351,40.800859
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ADRIAN JONES</name>
+      <address>350 SMITH AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 350 SMITH AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.3992795,40.8021877
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BILL1 BOB1</name>
+      <address>128 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 128 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BILL2 BOB2</name>
+      <address>129 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 129 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BILL3 BOB3</name>
+      <address>130 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 130 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BILL4 BOB4</name>
+      <address>131 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 131 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BILL5 BOB5</name>
+      <address>132 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 132 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CELESTE CRAWFORD</name>
+      <address>1131 BROAD AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 1131 BROAD AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.405066,40.809627
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CHARLES MACHAMER</name>
+      <address>538 ROSEMONT CT NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 538 ROSEMONT CT NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.404087,40.804376
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CONNIE ROCISFONO</name>
+      <address>1220 OAK AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 1220 OAK AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.409777,40.810948
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>DAVID RODRIGUEZ</name>
+      <address>4220 3RD ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 4220 3RD ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.424181,40.801319
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>HOLLI HAMILTON</name>
+      <address>1240 HOMEDALE AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 1240 HOMEDALE AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.40862,40.811469
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>JANICE NEWLON</name>
+      <address>2822 7TH ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 2822 7TH ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.405806,40.805015
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>JUDITH LA VOY</name>
+      <address>328 WHIPPLE AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 328 WHIPPLE AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.425564,40.802536
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>KATIE BRUMFIELD</name>
+      <address>2910 13TH ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 2910 13TH ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.406325,40.811669
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>KATIE A DAMJANOVIC</name>
+      <address>26 E TALLMADGE AVE  D</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Akron Address: 26 E TALLMADGE AVE  D <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.514069,41.101877
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>MICHAEL HOPKINS</name>
+      <address>219 LINCOLN AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 219 LINCOLN AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.3940763,40.8012132
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>MICHAEL HUDAK</name>
+      <address>150 VALLEYVIEW AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 150 VALLEYVIEW AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.421809,40.798417
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>RONALD BOWERS</name>
+      <address>148 LINWOOD AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 148 LINWOOD AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.414063,40.799188
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUE1 SUE1</name>
+      <address>123 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 123 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUE2 SUE2</name>
+      <address>124 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 124 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUE3 SUE3</name>
+      <address>125 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 125 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUE4 SUE4</name>
+      <address>126 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 126 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUE5 SUE5</name>
+      <address>127 FAKE STREET</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 127 FAKE STREET <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.378447,40.7989473
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>LATOYA BROWN</name>
+      <address>1565 ALLENFORD CT</address>
+      <description><![CDATA[ClassFP: C6 IncorpName: Columbus Address: 1565 ALLENFORD CT <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-82.8487318,39.9458831
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>JAMES OCONNOR</name>
+      <address>167  VALLEYVIEW AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 167  VALLEYVIEW AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.42251,40.798833
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BOB LUCIUS</name>
+      <address>806 ARLINGTON AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 806 ARLINGTON AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.400058,40.805939
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>VANESSA KUFTA</name>
+      <address>242 LINWOOD AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 242 LINWOOD AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.41399,40.8005319
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>LINDSEY STILLION</name>
+      <address>3215 2ND ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 3215 2ND ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.4112339,40.800556
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EUGENE LANZO</name>
+      <address>212 FAWCETT CT NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 212 FAWCETT CT NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.4085705,40.8007092
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>DEBORAH CARNES</name>
+      <address>3136 13TH ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 3136 13TH ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.410244,40.811538
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EDDY MOORE</name>
+      <address>125 ROSLYN AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 125 ROSLYN AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.412441,40.798863
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>AARON DUKES</name>
+      <address>2310 10TH ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 2310 10TH ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.399192,40.807455
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>JULIE VLACH</name>
+      <address>1716 7TH ST NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 1716 7TH ST NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.3928416,40.804571
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>STACY COLLINS</name>
+      <address>329 ROSLYN AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 329 ROSLYN AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.4122749,40.8018519
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>TERESA NYE</name>
+      <address>327 HARTER AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 327 HARTER AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#cancelledCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.418377,40.8020349
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>DEANA ROBINSON</name>
+      <address>729 BROAD AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 729 BROAD AVE NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.405308,40.806087
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name> MERCY MEDICAL CENTER</name>
+      <address>1320 MERCY DR NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 1320 MERCY DR NW <h3>HelloWorld</h3>]]></description>
+      <Point>
+        <coordinates>-81.395072,40.814336
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>TONYA CURTIS</name>
+      <address>339  BELLFLOWER AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 339  BELLFLOWER AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.4133669,40.802298
+</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>TONYA CURTIS</name>
+      <address>339  BELLFLOWER AVE NW</address>
+      <description><![CDATA[ClassFP: C2 IncorpName: Canton Address: 339  BELLFLOWER AVE NW <h3>HelloWorld</h3>]]></description>
+      <styleUrl>#currentCustomer</styleUrl>
+      <Point>
+        <coordinates>-81.4133669,40.802298
+</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCoding.Web", "GeoCoding\GeoCoding.Web.csproj", "{A8961DD4-5679-4A1E-874E-ECC0F3EC395C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCoding.Service", "GeoCoding.Service\GeoCoding.Service.csproj", "{FBBB97D5-0836-402D-A7AD-05449CFE2E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCoding.Model", "GeoCoding.Model\GeoCoding.Model.csproj", "{B61C44AD-A83F-45A0-AF23-A037747C6BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCoding.Repository", "GeoCoding.Repository\GeoCoding.Repository.csproj", "{D2ADA3F4-F7DE-439E-A6CD-40DCCA99A9CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{F097C0E4-9E3D-41A8-99B5-D8AE8FE88ABB}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll = Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll = Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Lib\Microsoft.Practices.ObjectBuilder2.dll = Lib\Microsoft.Practices.ObjectBuilder2.dll
+		Lib\Pariveda.dll = Lib\Pariveda.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8961DD4-5679-4A1E-874E-ECC0F3EC395C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8961DD4-5679-4A1E-874E-ECC0F3EC395C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8961DD4-5679-4A1E-874E-ECC0F3EC395C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8961DD4-5679-4A1E-874E-ECC0F3EC395C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBB97D5-0836-402D-A7AD-05449CFE2E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBB97D5-0836-402D-A7AD-05449CFE2E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBB97D5-0836-402D-A7AD-05449CFE2E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBB97D5-0836-402D-A7AD-05449CFE2E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61C44AD-A83F-45A0-AF23-A037747C6BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61C44AD-A83F-45A0-AF23-A037747C6BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61C44AD-A83F-45A0-AF23-A037747C6BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61C44AD-A83F-45A0-AF23-A037747C6BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2ADA3F4-F7DE-439E-A6CD-40DCCA99A9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2ADA3F4-F7DE-439E-A6CD-40DCCA99A9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2ADA3F4-F7DE-439E-A6CD-40DCCA99A9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2ADA3F4-F7DE-439E-A6CD-40DCCA99A9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

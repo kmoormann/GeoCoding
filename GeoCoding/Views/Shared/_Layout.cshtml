@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	  <script type="text/javascript">
+	      var ge;
+	      google.load("earth", "1");
+
+	      function init() {
+	          google.earth.createInstance('map3d', initCB, failureCB);
+	      }
+
+	      function initCB(instance) {
+	          ge = instance;
+	          ge.getWindow().setVisibility(true);
+	          var kmlString = ''
+                         + '<?xml version="1.0" encoding="UTF-8"?>'
+                         + '<kml xmlns="http://www.opengis.net/kml/2.2">'
+
+                         + '<Document>'
+                         + '  <Camera>'
+                         + '    <longitude>-122.444633</longitude>'
+                         + '    <latitude>37.801899</latitude>'
+                         + '    <altitude>139.629438</altitude>'
+                         + '    <heading>-70.0</heading>'
+                         + '    <tilt>75</tilt>'
+                         + '  </Camera>'
+
+                         + '  <Placemark>'
+                         + '    <name>Placemark from KML string</name>'
+                         + '    <Point>'
+                         + '      <coordinates>-122.448425,37.802907,0</coordinates>'
+                         + '    </Point>'
+                         + '  </Placemark>'
+
+                         + '</Document>'
+                         + '</kml>';
+
+	          var kmlObject = ge.parseKml(kmlString);
+	          ge.getFeatures().appendChild(kmlObject);
+	          ge.getView().setAbstractView(kmlObject.getAbstractView());
+	      }
+
+	      function failureCB(errorCode) {
+	      }
+
+	      google.setOnLoadCallback(init);
+  </script>
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

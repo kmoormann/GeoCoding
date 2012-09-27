@@ -1,0 +1,41 @@
+﻿@model GeoCoding.Model.Address
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <p>Hello</p><input type="text" name="address" /><br />
+     <p>City</p><input type="text" name="city" /><br />
+     <p>State</p><input type="text" name="state" /><br />
+    
+    <fieldset>
+        <legend>Address</legend>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{ 
+    <h3>New Message: @ViewBag.Message</h3>
+    
+}
