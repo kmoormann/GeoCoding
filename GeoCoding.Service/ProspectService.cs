@@ -17,7 +17,7 @@ namespace GeoCoding.Model
 
     public abstract class ProspectServiceBase : IProspectService
     {
-        protected ProspectRepository prospectRepository = new ProspectRepository();
+        protected IProspectRepository prospectRepository = new ProspectRepository();
 
         private string apiKey = null;
 
@@ -40,7 +40,7 @@ namespace GeoCoding.Model
 
         public virtual IEnumerable<Prospect> getList()
         {
-            return prospectRepository.GetList();
+            return prospectRepository.GetProspects();
         }
 
         public virtual void updateProspect(Prospect prospect)

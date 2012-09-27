@@ -9,10 +9,42 @@ using Pariveda.Util;
 
 namespace GeoCoding.Repository
 {
-    public class ProspectRepository
+    public interface IParivedaDevSchoolRepository<T>
     {
+        T FillObject(IDataReader dataReader);
+        IEnumerable<T> FillObjectCollection(IDataReader dataReader);
+        void Update(T t);
+    }
 
-        public List<Prospect> GetList()
+    public interface IProspectRepository
+    {
+        IEnumerable<Prospect> GetProspects();
+        void Update(Prospect prospect);
+    }
+
+    public abstract class ProspectRepositoryBase : IProspectRepository
+    {
+        public virtual IEnumerable<Prospect> GetProspects()
+        {
+            throw new NotImplementedException();
+        }
+    
+
+    public virtual void Update(Prospect prospect)
+    {
+ 	    throw new NotImplementedException();
+    }
+}
+
+
+    public class ProspectRepository : ProspectRepositoryBase, IParivedaDevSchoolRepository<Prospect>
+    {
+        public override IEnumerable<Prospect> GetProspects()
+        {
+            return GetList();
+        }
+
+        private IEnumerable<Prospect> GetList()
         {
             Database database = DatabaseFactory.CreateDatabase();
                using(IDataReader dataReader = database.ExecuteReader("GetProspects"))
@@ -21,7 +53,7 @@ namespace GeoCoding.Repository
             }
         }
 
-        private Prospect FillObject(IDataReader dataReader)
+        public Prospect FillObject(IDataReader dataReader)
         {
             Prospect prospect = new Prospect();
 
@@ -81,7 +113,7 @@ namespace GeoCoding.Repository
             return prospect;
         }
 
-        private List<Prospect> FillObjectCollection(IDataReader dataReader)
+        public IEnumerable<Prospect> FillObjectCollection(IDataReader dataReader)
         {
             List<Prospect> prospects = new List<Prospect>();
             while (dataReader.Read())
@@ -94,7 +126,7 @@ namespace GeoCoding.Repository
 
         
 
-        public void Update(Prospect prospect)
+        public override void Update(Prospect prospect)
         {
             try
             {

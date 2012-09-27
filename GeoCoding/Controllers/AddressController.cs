@@ -20,10 +20,10 @@ namespace GeoCoding.Controllers
 {
     public class AddressController : Controller
     {
-        KmlPrepDataService kmlPrepDataService = new KmlPrepDataService();
-        KmlDocumentService kmlDocumentService = new KmlDocumentService();
-        ProspectServiceYahoo prospectSerivce = new ProspectServiceYahoo();
-        JoinedProspectService joinedProspectService = new JoinedProspectService();
+        IKmlPrepDataService kmlPrepDataService = new KmlPrepDataService();
+        IKmlDocumentService kmlDocumentService = new KmlDocumentService();
+        IProspectService prospectSerivce = new ProspectServiceYahoo();
+        IJoinedProspectService joinedProspectService = new JoinedProspectService();
         //
         // GET: /Address/
         

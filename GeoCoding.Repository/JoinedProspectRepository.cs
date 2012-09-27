@@ -9,9 +9,24 @@ using Pariveda.Util;
 
 namespace GeoCoding.Repository
 {
-    public class JoinedProspectRepository
+    public interface IJoinedProspectRepository
     {
-        public List<JoinedProspect> GetList()
+        IEnumerable<JoinedProspect> GetJoinedProspects();
+    }
+
+    public abstract class JoinedProspectRepositoryBase : IJoinedProspectRepository
+    {
+        public abstract IEnumerable<JoinedProspect> GetJoinedProspects();
+    }
+
+    public class JoinedProspectRepository : JoinedProspectRepositoryBase
+    {
+        public override IEnumerable<JoinedProspect> GetJoinedProspects()
+        {
+            return GetList();
+        }
+
+        private List<JoinedProspect> GetList()
         {
             Database database = DatabaseFactory.CreateDatabase();
             // joins the prospect table with the table of company boundries and returns the matches

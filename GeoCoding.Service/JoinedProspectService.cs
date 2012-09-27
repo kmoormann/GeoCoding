@@ -18,11 +18,11 @@ namespace GeoCoding.Model
 
     public class JoinedProspectService : JoinedProspectServiceBase
     {
-        JoinedProspectRepository joinedProspectRepository = new JoinedProspectRepository();
+        IJoinedProspectRepository joinedProspectRepository = new JoinedProspectRepository();
 
         public override IEnumerable<JoinedProspect> getList()
         {
-            return joinedProspectRepository.GetList();
+            return joinedProspectRepository.GetJoinedProspects();
         }
 
 
