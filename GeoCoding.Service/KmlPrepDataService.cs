@@ -8,10 +8,24 @@ using System.IO;
 
 namespace GeoCoding.Model
 {
-    public class KmlPrepDataService
+    public interface IKmlPrepDataService
+    {
+        KmlPrepData convertAddress(String xml);
+    }
+
+    public abstract class KmlPrepDataServiceBase : IKmlPrepDataService
+    {
+        public virtual KmlPrepData convertAddress(string xml)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+    public class KmlPrepDataService : KmlPrepDataServiceBase
     {
         // the class parses through returned xml and gets values for lat and long
-        public KmlPrepData convertAddress(String xml)
+        public override KmlPrepData convertAddress(String xml)
         {
             KmlPrepData kmlPrepData = new KmlPrepData();
 

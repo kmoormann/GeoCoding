@@ -22,7 +22,7 @@ namespace GeoCoding.Controllers
     {
         KmlPrepDataService kmlPrepDataService = new KmlPrepDataService();
         KmlDocumentService kmlDocumentService = new KmlDocumentService();
-        ProspectService prospectSerivce = new ProspectService();
+        ProspectServiceYahoo prospectSerivce = new ProspectServiceYahoo();
         JoinedProspectService joinedProspectService = new JoinedProspectService();
         //
         // GET: /Address/
@@ -65,7 +65,7 @@ namespace GeoCoding.Controllers
 
         public ActionResult Refresh()
         {
-            List<Prospect> prospectList = prospectSerivce.getList();
+            IEnumerable<Prospect> prospectList = prospectSerivce.getList();
             int counter = 0;
             Document document = new Document();
 
@@ -80,7 +80,7 @@ namespace GeoCoding.Controllers
                     System.Threading.Thread.Sleep(5000);
                 }
 
-                String responseFromServer = prospectSerivce.makePrepDataYahoo(prospect);
+                String responseFromServer = prospectSerivce.makePrepData(prospect);
                 KmlPrepData kmlPrepData = new KmlPrepData();
                 //System.Diagnostics.Debug.WriteLine(responseFromServer);
                 kmlPrepData = kmlPrepDataService.convertAddress(responseFromServer);
@@ -90,7 +90,7 @@ namespace GeoCoding.Controllers
             }
 
             //run stored procedure to update db
-            List<JoinedProspect> joinedPospects = joinedProspectService.getList();
+            IEnumerable<JoinedProspect> joinedPospects = joinedProspectService.getList();
 
             // get results
             //create styles for placemarkers

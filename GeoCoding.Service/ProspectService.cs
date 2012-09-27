@@ -8,21 +8,64 @@ using System.IO;
 
 namespace GeoCoding.Model
 {
-    public class ProspectService
+    public interface IProspectService
     {
-        ProspectRepository prospectRepository = new ProspectRepository();
-        // needed for yahoo 
-        private String appID = "lpU1yPHV34ExWduHerXkGBQcrBu2DEE6aptAE2YnOJ5zzx9YFPU6ckkCryD4npI";
+        IEnumerable<Prospect> getList();
+        String makePrepData(Prospect prospect);
+        void updateProspect(Prospect prospect);
+    }
 
-        public List<Prospect> getList()
+    public abstract class ProspectServiceBase : IProspectService
+    {
+        protected ProspectRepository prospectRepository = new ProspectRepository();
+
+        private string apiKey = null;
+
+        public virtual string ApiKey
+        {
+            get
+            {
+                return apiKey;
+            }
+            set
+            {
+                apiKey = value;
+            }
+        }
+
+        public virtual string makePrepData(Prospect prospect)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual IEnumerable<Prospect> getList()
         {
             return prospectRepository.GetList();
         }
-        public string makePrepDataYahoo(Prospect prospect)
+
+        public virtual void updateProspect(Prospect prospect)
+        {
+            prospectRepository.Update(prospect);
+            System.Diagnostics.Debug.WriteLine("3 Prospect Service the update lat long is " + prospect.CorrectedLatitude + " " + prospect.CorrectedLongitude);
+        }
+    }
+
+
+    public class ProspectServiceYahoo : ProspectServiceBase
+    {
+        public ProspectServiceYahoo()
+        {
+            ApiKey = "lpU1yPHV34ExWduHerXkGBQcrBu2DEE6aptAE2YnOJ5zzx9YFPU6ckkCryD4npI";
+        }
+                
+
+        
+        
+        public override string makePrepData(Prospect prospect)
         {
             
             // Create a request using a URL that can receive a post. 
-            WebRequest request = WebRequest.Create("http://where.yahooapis.com/geocode?q= " + prospect.CorrectedAddressLine1 + ",+" + prospect.CorrectedCity + ",+" + prospect.CorrectedState +"&appid=" + appID );
+            WebRequest request = WebRequest.Create("http://where.yahooapis.com/geocode?q= " + prospect.CorrectedAddressLine1 + ",+" + prospect.CorrectedCity + ",+" + prospect.CorrectedState +"&appid=" + ApiKey );
             // Set the Method property of the request to POST.
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
@@ -59,8 +102,16 @@ namespace GeoCoding.Model
 
             return responseFromServer;
         }
+        
+        
+
+
+    }
+
+    public class ProspectServiceGoogle : ProspectServiceBase
+    {
         // Google API
-        public String makePrepData(Prospect prospect)
+        public override string makePrepData(Prospect prospect)
         {
             // Create a request using a URL that can receive a post. 
             WebRequest request = WebRequest.Create("http://maps.googleapis.com/maps/api/geocode/xml?address=+" + prospect.CorrectedAddressLine1 + ",+" + prospect.CorrectedCity + ",+" + prospect.CorrectedState + "&sensor=false");
@@ -97,12 +148,6 @@ namespace GeoCoding.Model
             response.Close();
 
             return responseFromServer;
-        }
-
-        public void updateProspect(Prospect prospect)
-        {
-            prospectRepository.Update(prospect);
-            System.Diagnostics.Debug.WriteLine("3 Prospect Service the update lat long is " + prospect.CorrectedLatitude + " " + prospect.CorrectedLongitude);
         }
     }
 }
