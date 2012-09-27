@@ -20,10 +20,26 @@ namespace GeoCoding.Controllers
 {
     public class AddressController : Controller
     {
-        IKmlPrepDataService kmlPrepDataService = new KmlPrepDataService();
-        IKmlDocumentService kmlDocumentService = new KmlDocumentService();
-        IProspectService prospectSerivce = new ProspectServiceYahoo();
-        IJoinedProspectService joinedProspectService = new JoinedProspectService();
+        IKmlPrepDataService _kmlPrepDataService; 
+        IKmlDocumentService _kmlDocumentService; 
+        IProspectService _prospectSerivce; 
+        IJoinedProspectService _joinedProspectService;
+        
+        public AddressController()
+        {
+            _kmlPrepDataService = new KmlPrepDataService();
+            _kmlDocumentService = new KmlDocumentService();
+            _prospectSerivce = new ProspectServiceYahoo();
+            _joinedProspectService = new JoinedProspectService();
+        }
+
+        public AddressController(IKmlPrepDataService prepDataService, IKmlDocumentService kmlDocService, IProspectService prospectService, IJoinedProspectService joinedProspectService)
+        {
+            _kmlPrepDataService = prepDataService;
+            _kmlDocumentService = kmlDocService;
+            _prospectSerivce = prospectService;
+            _joinedProspectService = joinedProspectService;
+        }
         //
         // GET: /Address/
         
@@ -65,7 +81,7 @@ namespace GeoCoding.Controllers
 
         public ActionResult Refresh()
         {
-            IEnumerable<Prospect> prospectList = prospectSerivce.getList();
+            IEnumerable<Prospect> prospectList = _prospectSerivce.getList();
             int counter = 0;
             Document document = new Document();
 
@@ -80,17 +96,17 @@ namespace GeoCoding.Controllers
                     System.Threading.Thread.Sleep(5000);
                 }
 
-                String responseFromServer = prospectSerivce.makePrepData(prospect);
+                String responseFromServer = _prospectSerivce.makePrepData(prospect);
                 KmlPrepData kmlPrepData = new KmlPrepData();
                 //System.Diagnostics.Debug.WriteLine(responseFromServer);
-                kmlPrepData = kmlPrepDataService.convertAddress(responseFromServer);
+                kmlPrepData = _kmlPrepDataService.convertAddress(responseFromServer);
 
                 // update lat long to the database
-                prospectSerivce.updateProspect(prospect);
+                _prospectSerivce.updateProspect(prospect);
             }
 
             //run stored procedure to update db
-            IEnumerable<JoinedProspect> joinedPospects = joinedProspectService.getList();
+            IEnumerable<JoinedProspect> joinedPospects = _joinedProspectService.getList();
 
             // get results
             //create styles for placemarkers
@@ -122,7 +138,7 @@ namespace GeoCoding.Controllers
             {
                 // loop through and add information to kmldocument 
                 KmlPrepData kmlPrepData = new KmlPrepData();
-                kmlDocumentService.addElementToKmlDocument(jp, document);
+                _kmlDocumentService.addElementToKmlDocument(jp, document);
 
             }
 
@@ -136,7 +152,7 @@ namespace GeoCoding.Controllers
             //System.Diagnostics.Debug.WriteLine(serializer.Xml);
 
 
-            kmlDocumentService.saveKmlDocument(document);
+            _kmlDocumentService.saveKmlDocument(document);
             return View();
         }
 
